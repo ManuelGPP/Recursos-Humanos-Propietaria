@@ -1,0 +1,60 @@
+﻿@model IEnumerable<RRHH.Models.Empleado>
+
+@{
+    ViewBag.Title = "Empleados";
+}
+
+<h2>Listado de Empleados</h2>
+
+<p>
+    <a href="~/Empleado/Create" class="btn btn-success" data-toggle="empleado" data-target="create">Registrar Empleado</a>
+    <!--X@Html.ActionLink("Create New", "Create")-->
+</p>
+
+    
+<table class="table table-bordered">
+    <tr class="btn-primary">
+
+        <th>Cedula</th>
+        <th>Nombre</th>
+        <th>Estado</th>
+        <th>Fecha de ingreso</th>
+        <th>Salario Mensual</th>
+        <th>Departamento</th>
+        <th>Puesto</th>
+        <th>Opciones</th>
+    </tr>
+
+
+        @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalarioMes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puesto.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdEmpleado }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdEmpleado }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdEmpleado })
+        </td>
+    </tr>
+}
+
+    </table>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<RRHH.Models.Competencia>
+
+@{
+    ViewBag.Title = "Competencias";
+}
+
+<h2>Listado de Competencias</h2>
+
+<p>
+    <a href="~/Competencias/Create" class="btn btn-success" data-toggle="competencias" data-target="create">Crear Competencia</a>
+    <!--Html.ActionLink("Crear competencia", "Create")-->
+
+</p>
+
+
+
+
+<table class="table table-bordered">
+    <tr class="btn-primary">
+
+        <th>Descripción</th>
+        <th>Estado</th>
+        <th>Opciones</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionCompetencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdCompetencia }) |
+                <!--Html.ActionLink("Detalles", "Details", new { id = item.IdCompetencia })-->
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdCompetencia })
+            </td>
+        </tr>
+    }
+
+</table>

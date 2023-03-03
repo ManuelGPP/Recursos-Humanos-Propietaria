@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b2473d475a27496897cca7b284445f02" Name="Diagram1">
+        <EntityTypeShape EntityType="RecursosHumanosModel.Candidato" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.Capacitacion" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.Competencia" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.Departamento" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.Empleado" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.ExperienciaLaboral" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.Idioma" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.Puesto" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecursosHumanosModel.sysdiagram" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Candidato__IdCap__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Candidato__IdCom__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Candidato__IdDep__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Candidato__IdExp__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Capacitac__IdIdi__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Empleado__IdDepa__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Empleado__IdPues__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="RecursosHumanosModel.FK__Experienc__IdPue__5DCAEF64" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

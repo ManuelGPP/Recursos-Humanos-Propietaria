@@ -1,0 +1,50 @@
+﻿@model IEnumerable<RRHH.Models.ExperienciaLaboral>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Experiencias Laborales</h2>
+
+<p>
+    <a href="~/ExperienciaLaboral/Create" class="btn btn-success" data-toggle="experiencialaboral" data-target="create">Registrar Experiencia Laboral</a>
+
+    <!--@Html.ActionLink("Create New", "Create")-->
+</p>
+<table class="table table-bordered">
+    <tr class="btn-primary">
+
+        <th>Empresa</th>
+        <th>Desde</th>
+        <th>Hasta</th>
+        <th>Salario</th>
+        <th>Nombre</th>
+        <th>Opciones</th>
+            </tr>
+
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDesde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaHasta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puesto.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdExperienciaLaboral }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdExperienciaLaboral }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdExperienciaLaboral })
+        </td>
+    </tr>
+}
+
+</table>

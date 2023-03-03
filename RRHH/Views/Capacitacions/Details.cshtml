@@ -1,0 +1,66 @@
+﻿@model RRHH.Models.Capacitacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Capacitacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nivel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nivel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDesde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDesde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHasta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHasta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Institucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Institucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idioma.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idioma.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdCapacitacion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

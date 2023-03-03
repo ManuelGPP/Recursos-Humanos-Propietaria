@@ -1,0 +1,38 @@
+﻿@model IEnumerable<RRHH.Models.Departamento>
+
+    @{
+    ViewBag.Title = "Departamento";
+    }
+
+    <h2>Listado de Departamentos</h2>
+
+    <p>
+        <a href="~/Departamento/Create" class="btn btn-success" data-toggle="departamento" data-target="create">Registrar Departamento</a>
+        <!--@Html.ActionLink("Create New", "Create")-->
+    </p>
+    <table class="table table-bordered">
+        <tr class="btn-primary">
+
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Opciones</th>
+            </tr>
+            
+    
+            @foreach (var item in Model) {
+<tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdDepartamento }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdDepartamento }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdDepartamento })
+            </td>
+        </tr>
+}
+
+</table>

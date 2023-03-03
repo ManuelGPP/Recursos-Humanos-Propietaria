@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RRHH.Models.Capacitacion>
+
+@{
+    ViewBag.Title = "Capacitaciones"; 
+}
+
+<h2>Listado de Capacitaciones</h2> 
+
+<p>
+<a href="~/Capacitacions/Create" class="btn btn-success" data-toggle="capacitacions" data-target="create">Registar Capacitacion</a>
+    <!--@Html.ActionLink("Create New", "Create")-->
+</p>
+<table class="table table-bordered">
+    <tr class = "btn-primary">
+
+        <th>Descripción</th>
+        <th>Estado</th>
+        <th>Fecha Desde</th>
+        <th>Fecha Hasta</th>
+        <th>Institución</th>
+        <th>Idioma</th>
+        <th>Opciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDesde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaHasta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Institucion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idioma.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdCapacitacion }) |
+            <!--Html.ActionLink("Details", "Details", new { id=item.IdCapacitacion }) |-->
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdCapacitacion })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,98 @@
+﻿@model RRHH.Models.Candidato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Candidato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PuestoAspirado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PuestoAspirado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalarioApirado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalarioApirado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecomendadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecomendadoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacitacion.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacitacion.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Competencia.DescripcionCompetencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Competencia.DescripcionCompetencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento1.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departamento1.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExperienciaLaboral.Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExperienciaLaboral.Empresa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdCandidato }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

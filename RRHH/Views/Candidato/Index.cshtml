@@ -1,0 +1,76 @@
+﻿@model IEnumerable<RRHH.Models.Candidato>
+
+@{
+    ViewBag.Title = "Candidatos";
+}
+
+<h2>Listado de Candidatos</h2>
+
+<p>
+    <a href="~/Candidato/Create" class="btn btn-success" data-toggle="Candidato" data-target="create">Crear Candidato</a>
+    <!--@Html.ActionLink("Create New", "Create")-->
+</p>
+
+
+<table class="table table-bordered">
+    <tr class="btn-primary">
+
+        <th>Cedula</th>
+        <th>Nombre</th>
+        <th>PuestoAspirado</th>
+        <th>SalarioApirado</th>
+        <th>Empresa</th>
+        <th>Descripcion</th>
+        <th>DescripcionCompetencia</th>
+        <th>Nombre</th>
+        <th>RecomendadoPor</th>
+        <th>Opciones</th>
+
+    </tr>
+
+
+
+
+
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PuestoAspirado)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.SalarioApirado)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacitacion.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competencia.DescripcionCompetencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento1.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperienciaLaboral.Empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecomendadoPor)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.IdCandidato }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.IdCandidato }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdCandidato })
+        </td>
+    </tr>
+}
+
+    </table>

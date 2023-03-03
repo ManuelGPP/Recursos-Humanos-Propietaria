@@ -1,0 +1,58 @@
+﻿@model RRHH.Models.ExperienciaLaboral
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ExperienciaLaboral</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDesde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDesde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHasta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHasta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Puesto.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Puesto.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdExperienciaLaboral }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
